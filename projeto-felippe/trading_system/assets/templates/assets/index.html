@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trading System</title>
+</head>
+<body>
+    <h1>Ativos</h1>
+    {% for asset in assets %}
+    <div>
+        <h2>{{ asset.name }}</h2>
+        <p>Limite inferior: {{ asset.lower_bound }}</p>
+        <p>Limite superior: {{ asset.upper_bound }}</p>
+        <p>Frequência de checagem: {{ asset.check_frequency }} minutos</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
